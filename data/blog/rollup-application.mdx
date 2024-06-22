@@ -1,0 +1,115 @@
+---
+title: Rollup Application
+date: '2024-06-22'
+lastmod: '2024-06-22'
+tags: ['react', 'node.js', 'full-stack', 'Material UI', 'MERN']
+draft: false
+summary: Rollup is a CAD based application that calculated mass of parts and created a bill of materials for rolled up mass
+layout: PostBanner
+images: ['/static/blogs/rollup.png']
+---
+
+## Introduction
+
+Using the 3rd party web-services, created a rollup full stack MERN (MongoDB, Express, React, Node) application that was in integration with a CAD based application that calculated mass of parts and created a bill of materials for rolled up mass
+
+The Mass and Cost Rollup tool provides a tool for Engineers and other business areas to consume the mass and cost information relating to a bill of materials that resides within the 3DEXPERIENCE platform. Data can be viewed, tracked and edited depending on the users’ granted role within the tool.
+
+## Tech Stack used
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+To build the frontend using React 17 with hooks and Material UI
+
+![Node.js](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+To build the backend REST API using Node.js and Express
+
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+To store the data and showing metrics for mass changed over the time
+
+## Why is it Needed
+
+- Product structures, or ‘Bills of Materials’ (BOMs) are used to logically represent how a collection of parts come together to form a finished product. There are several types of product structure depending on what information is being represented – as built, as supplied, as manufactured etc.
+
+- For this POC, the focus is on engineering BOM structures, which are typically representative of how a product is put together. Complex products can have thousands of parts but the product structure used to manage them can make the data easier to handle and help in extracting useful business information.
+
+- Information that companies may wish to extract includes ‘total / best available mass’ or ‘total cost’ for example.
+
+## Functions
+
+- Configurable columns to show additional data as well as the mass attributes
+
+- Separate web page to be able to show mass / cost data
+
+- Analytics page to be able to show the data in other forms and show the tracking of mass data in time
+
+- Configurable tolerance bands for target, calculated and declared masses
+
+- Cell coloring to show the various states of the masses across all objects
+
+- Web page interactivity to be able to open up any sub object from the original structure to be able to analyze any area of the CAD structure
+
+- Configurable editability of attributes to be able to read and/or write back data to 3DX
+
+- Export data in various formats (xml, csv or xls)
+
+## Calculations
+
+### Mass Calculations
+
+Mass-rollup mainly represents vertical calculation i.e., summation from child level to parent level
+
+- Attributes :
+
+  - Actual Mass : must sum up objects where End Item = true (should ignore End Item = False) NEW
+
+  - Estimated Mass : must sum up objects where End Item = true (should ignore End Item = False) NEW
+
+  - Calculated Mass : must sum up objects where End Item = true (should ignore End Item = False) NEW
+
+- Best Available :
+
+  - Calculation considers Actual Mass, Estimated Mass, and Calculated Mass for each part.
+
+  - Actual Mass has highest priority; however should it have a value of 0 it will use Estimated Mass. If Estimated Mass also has a value of 0 it will use Calculated Mass
+
+- Tolerance Bound : Percentages for the upper and lower bounds of the mass's should be set as follows:
+
+  - Actual Mass +/- 0.5 %
+
+  - Estimated Mass +/- 1 %
+
+  - Calculated Mass +/- 5 %
+
+### Cost Calculations
+
+Cost-rollup represents both horizontal & vertical calculation i.e., summation from left to right and from child level to parent level
+
+- Attributes :
+
+  - Design and R&D cost : must sum up objects where End Item = true (should ignore End Item = False) NEW
+
+  - Tooling cost : must sum up objects where End Item = true (should ignore End Item = False) NEW
+
+  - Total Piece cost (Design and R&D cost + Tooling cost) : must sum up objects where End Item = true (should ignore End Item = False) NEW
+
+- Tolerance Bound : Percentages for the upper and lower bounds of the cost's should be set as follows:
+
+  - Design and R&D cost +/- 0.5 %
+
+  - Tooling cost +/- 1 %
+
+  - Total Piece cost +/- 5 %
+
+## Demonstration
+
+<video controls>
+  <source src="/static/blogs/demo_rollup.mp4" type="video/mp4" />
+</video>
+
+## Support
+
+Support this blog by giving a star on [Github](https://github.com/pgupta1795), sharing your own blog and giving a shoutout on Twitter or be a project [sponsor](https://github.com/sponsors/pgupta1795).
+
+## Licence
+
+[MIT](https://github.com/pgupta1795) © [Pallav Gupta](https://www.pgupta1795.in)

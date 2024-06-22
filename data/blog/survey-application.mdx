@@ -1,0 +1,110 @@
+---
+title: 'Survey Application'
+date: '2024-06-21'
+lastmod: '2024-06-21'
+tags: ['survey', 'react', 'node.js', 'full-stack', 'MERN', 'mongodb']
+draft: false
+summary: 'A survey application, that gives ability to admin of creating forms and these survey forms can be distributed to employees or group of users. Responses from users are recorded and shown in graphical form, that also emails the report based on responses to users.'
+---
+
+![survey-banner](/static/blogs/survey.png)
+
+## Introduction
+
+The survey application empowers administrators to create customized forms. These forms can be distributed to employees or specific user groups. User responses are collected and visually represented through graphical representations. Additionally, the application generates reports based on the responses and sends them via email to the designated users. It streamlines the process of gathering feedback and analyzing data from various stakeholders.
+
+## Tech Stack used
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+To build the frontend using React 17 with hooks and Material UI
+
+![Node.js](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+To build the backend REST API using Node.js and Express
+
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+To store the data and showing metrics for mass changed over the time
+
+## Demonstration
+
+<video controls>
+  <source src="/static/blogs/demo_survey.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+## Features
+
+Let's dive into the new features and improvements In PersonAI.
+
+### Email
+
+Admin will be able to send the form to users via email from the application itself.
+
+### User
+
+Stores all the user details such as name, email, company logo, user role (admin, non-admin)
+![survey-user](/static/blogs/survey_user.png)
+
+### Create Form
+
+Admin will be able to create a form with multiple questions and different types for questions are supported.
+Stores the details of sections of form, questions and available options of the form
+
+![survey-user](/static/blogs/survey_form.png)
+
+### Analytics & Responses
+
+With the form created, users can fill the form and submit the response.
+Admin will be able to view the responses and also can download the responses in CSV format.
+Stores the completed and ongoing responses of the users
+![survey-user](/static/blogs/survey_responses.png)
+
+### Maturity Report
+
+Admin will be able to view the maturity report of the organization and send the maturity report to the users.
+
+## Application modes
+
+### Admin Mode
+
+- Edit Personal Details and Upload Logo
+- Create/Edit Forms
+- Submit Responses
+- View Form Responses of all the organizations and users in a graphical view
+- View and Download Maturity Report of all the organizations
+- Send email to users to fill out the form
+
+### Non- Admin Mode
+
+- Edit Personal Details and Upload Logo
+- Submit Response
+- View and Download Maturity Report of their organization
+
+## Conclusion
+
+Docker is used to containerize the application and deploy it on the AWS which also contains portainer for managing the applications running on AWS docker env.
+
+- Sign-up
+- Sign-in
+- Reset Password
+- Edit Personal Details
+- Create/Edit Form **<span className="text-red-800">(Admin)</span>**
+- Upload Images to Questions/Options **<span className="text-red-800">(Admin)</span>**
+- Add/Edit/Delete Form Sections **<span className="text-red-800">(Admin)</span>**
+- Add different type of Questions as Multiple, checkbox, linear, dropdown, text **<span className="text-red-800">(Admin)</span>**
+- Drag Questions to change order **<span className="text-red-800">(Admin)</span>**
+- Send Email to users to fill-out forms **<span className="text-red-800">(Admin)</span>**
+- Submit Response
+- View PLM Maturity Report
+- Download PLM Maturity Report
+- View Submitted Responses of All Organizations **<span className="text-red-800">(Admin)</span>**
+- View / Download Maturity Report of All Organizations **<span className="text-red-800">(Admin)</span>**
+
+![survey-user](/static/blogs/survey_conclusion.png)
+
+## Support
+
+Support this blog by giving a star on [Github](https://github.com/pgupta1795), sharing your own blog and giving a shoutout on Twitter or be a project [sponsor](https://github.com/sponsors/pgupta1795).
+
+## Licence
+
+[MIT](https://github.com/pgupta1795) © [Pallav Gupta](https://www.pgupta1795.in)

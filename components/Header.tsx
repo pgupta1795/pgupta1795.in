@@ -1,10 +1,11 @@
-import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
+import siteMetadata from '@/data/siteMetadata'
 import Link from './Link'
+import Logo from './Logo'
 import MobileNav from './MobileNav'
-import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
+import ThemeSwitch from './ThemeSwitch'
+import SocialIcon from './social-icons'
 
 const Header = () => {
   return (
@@ -25,17 +26,23 @@ const Header = () => {
           </div>
         </Link>
       </div>
-      <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
+      <div className="relative flex items-center space-x-4 leading-5 sm:space-x-6">
         {headerNavLinks
           .filter((link) => link.href !== '/')
           .map((link) => (
-            <Link
+            <div
+              className="hover-underline-animation flex items-center justify-center space-x-1"
               key={link.title}
-              href={link.href}
-              className="hidden font-medium text-gray-900 dark:text-gray-100 sm:block"
             >
-              {link.title}
-            </Link>
+              <SocialIcon kind={link.kind} href={link.href} size={6} />
+              <Link
+                key={link.title}
+                href={link.href}
+                className="hidden font-medium text-gray-900 dark:text-gray-100 sm:block"
+              >
+                {link.title}
+              </Link>
+            </div>
           ))}
         <SearchButton />
         <ThemeSwitch />

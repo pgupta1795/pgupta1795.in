@@ -1,12 +1,11 @@
 {
-  "name": "tailwind-nextjs-starter-blog",
+  "name": "pgupta1795.in",
   "version": "2.2.0",
   "private": true,
   "scripts": {
-    "start": "next dev",
     "dev": "cross-env INIT_CWD=$PWD next dev",
     "build": "cross-env INIT_CWD=$PWD next build && cross-env NODE_OPTIONS='--experimental-json-modules' node ./scripts/postbuild.mjs",
-    "serve": "next start",
+    "start": "next start",
     "analyze": "cross-env ANALYZE=true next build",
     "lint": "next lint --fix --dir pages --dir app --dir components --dir lib --dir layouts --dir scripts",
     "prepare": "husky"
@@ -21,6 +20,7 @@
     "esbuild": "0.20.2",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.2",
+    "gsap": "^3.12.5",
     "hast-util-from-html-isomorphic": "^2.0.0",
     "image-size": "1.0.0",
     "next": "14.2.3",
@@ -41,6 +41,7 @@
     "remark-gfm": "^4.0.0",
     "remark-github-blockquote-alert": "^1.2.1",
     "remark-math": "^6.0.0",
+    "sharp": "^0.33.4",
     "tailwindcss": "^3.4.3",
     "unist-util-visit": "^5.0.0"
   },

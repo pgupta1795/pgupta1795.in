@@ -1,0 +1,83 @@
+---
+title: 'PersonAI : RAG based AI application'
+date: '2024-06-21'
+lastmod: '2024-06-21'
+tags:
+  ['ai', 'next-js', 'python', 'java', 'spring-boot', 'react', 'chatbot', 'full-stack', 'postgresql']
+draft: false
+summary: 'An AI based full stack next.js application using python and langchain for chatbot and Spring Boot as micro service architechture to store data. Application lets you integrate your data from different platforms such as Confluence, JIRA, PDFs, Word docs, URLs, etc. and use it to create chatbots. The application also has a chatbot builder that lets you create chatbots using a drag and drop interface.'
+images: ['/static/blogs/personai.png']
+---
+
+<TOCInline toc={props.toc} />
+
+![personai-banner](/static/blogs/personai.png)
+
+## Introduction
+
+PersonAI is an AI based full stack next.js application using python and langchain for chatbot and Spring Boot as micro service architechture to store data. Application lets you integrate your data from different platforms such as Confluence, JIRA, PDFs, Word docs, URLs, etc. and use it to create chatbots. The application also has a chatbot builder that lets you create chat
+
+## Tech Stack used
+
+![Nextjs](https://img.shields.io/badge/next.js-000000.svg?style=for-the-badge&logo=next-dot-js&logoColor=white)
+To build the frontend using Next.Js 14 with app directory and bleeding edge features using tailwindcss, shadcn ui and zustand
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+To ensure type safety and code quality
+![Spring Boot](https://img.shields.io/badge/spring%20boot-%236DB33F.svg?style=for-the-badge&logo=spring-boot&logoColor=white)
+To build the backend REST API for authentication, storing chat history, storing integration data and building micro services
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+Multiple Open Source LLMs such as Llama2, mistral 7b are currently supported for chatbot that works on RAG (Retrieval Augmented Generation) model.
+
+## Demonstration
+
+<video controls>
+  <source src="/static/blogs/demo_personai.mp4" type="video/mp4" />
+</video>
+
+## Features
+
+Let's dive into the new features and improvements In PersonAI.
+
+### Chatbot
+
+PersonAI provides chatbots using [Llama2](https://github.com/langchain/llama2) or [Mistral 7b](https://github.com/langchain/mistral7b) modesl to answer queries that the end user asks based on the data that you integrate from different sources.
+Data integrated by each user is stored in the database and security is ensured using JWT tokens so that integrated data of one user is not exposed to other users.
+
+### Integrations
+
+#### Confluence Integration
+
+`Confluence` is a popular collaboration tool used by many companies. It provides a centralized place to store and share information. Due to its popularity, it is a good candidate for integration, allowing you to create chatbots that can answer questions from your documentation.
+You will need to create a `Confluence` account and generate an API token. You can find the steps to generate the API token [here](https://confluence.atlassian.com/cloud/api-tokens-938839638.html).
+You will need to provide the confluence space name as well as the API token to the chatbot builder.
+
+#### URL Integration
+
+You can integrate `URLs` to your chatbot. The chatbot will fetch the content from the URL and use it to answer questions.
+
+#### File Integration
+
+You can integrate `files` such as PDFs, Word docs, Code files, Excels, PPTs, etc. to your chatbot. The chatbot will fetch the content from the file and use it to answer questions.
+
+#### Github / Bitbucket Integration
+
+You can integrate your `Github` or `Bitbucket` repositories to your chatbot. The chatbot will fetch the content from the repository and use it to answer questions.
+You will need to create a git account in github or bitbucket and generate an API token. You can find the steps to generate the API token [here](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token).
+You will need to provide the github/ bitbucket repo name along with the API token to the chatbot builder.
+
+## Conclusion
+
+To summarize PersonAI is a full stack RAG based AI application that lets you build chatbots using your data. It is a good candidate for integration with Confluence, JIRA, PDFs, Word docs, URLs, etc.
+
+<video controls>
+  <source src="/static/blogs/demo_personai_2.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+## Support
+
+Support this blog by giving a star on [Github](https://github.com/pgupta1795), sharing your own blog and giving a shoutout on Twitter or be a project [sponsor](https://github.com/sponsors/pgupta1795).
+
+## Licence
+
+[MIT](https://github.com/pgupta1795) © [Pallav Gupta](https://www.pgupta1795.in)

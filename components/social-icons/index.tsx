@@ -1,14 +1,20 @@
+import { AnchorHTMLAttributes, DetailedHTMLProps } from 'react'
 import {
-  Mail,
-  Github,
+  Blog,
+  CircleDot,
+  CurlyBraces,
   Facebook,
-  Youtube,
+  Github,
+  Hash,
+  Instagram,
   Linkedin,
+  Mail,
+  Mastodon,
+  Resume,
+  Threads,
   Twitter,
   X,
-  Mastodon,
-  Threads,
-  Instagram,
+  Youtube,
 } from './icons'
 
 const components = {
@@ -22,15 +28,25 @@ const components = {
   mastodon: Mastodon,
   threads: Threads,
   instagram: Instagram,
+  resume: Resume,
+  hash: Hash,
+  blog: Blog,
+  circleDot: CircleDot,
+  curlyBraces: CurlyBraces,
 }
 
-type SocialIconProps = {
-  kind: keyof typeof components
+export type KindProps = keyof typeof components
+
+type SocialIconProps = DetailedHTMLProps<
+  AnchorHTMLAttributes<HTMLAnchorElement>,
+  HTMLAnchorElement
+> & {
+  kind: KindProps
   href: string | undefined
   size?: number
 }
 
-const SocialIcon = ({ kind, href, size = 8 }: SocialIconProps) => {
+const SocialIcon = ({ kind, href, size = 8, ...rest }: SocialIconProps) => {
   if (!href || (kind === 'mail' && !/^mailto:\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(href)))
     return null
 
@@ -38,10 +54,11 @@ const SocialIcon = ({ kind, href, size = 8 }: SocialIconProps) => {
 
   return (
     <a
-      className="text-sm text-gray-500 transition hover:text-gray-600"
+      className="name-animation text-sm text-gray-500 transition hover:text-gray-600"
       target="_blank"
       rel="noopener noreferrer"
       href={href}
+      {...rest}
     >
       <span className="sr-only">{kind}</span>
       <SocialSvg

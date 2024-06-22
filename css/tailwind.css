@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --bg1: 30, 22%, 96%, 0.75;
+  }
+  .dark {
+    --bg1: 210, 4%, 10%, 0.8;
+  }
+}
+
 .task-list-item::before {
   @apply hidden;
 }
@@ -48,4 +57,46 @@ input:-webkit-autofill:focus {
 .linkicon {
   display: inline-block;
   vertical-align: middle;
+}
+
+/* animation css */
+
+.hover-underline-animation {
+  position: relative;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: rgb(244 114 182);
+  transform-origin: bottom right;
+  transition: transform 0.15s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* animation 2 : spin */
+@-webkit-keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.group:hover .group-hover\:animate-spin-slow {
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
 }
