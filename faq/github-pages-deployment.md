@@ -1,7 +1,5 @@
 # How do I deploy on Github pages?
 
-[Demo](https://timlrx.github.io/pgupta1795.in/) & [Source](https://github.com/timlrx/pgupta1795.in/tree/test-gh-pages-static)
-
 1. Follow the section on creating a static build in the main README and test it locally to ensure that it works.
 2. Specify the base path in `next.config.js` to match your repository name e.g. `basePath: "/pgupta1795.in"`.
 3. Modify `component/Image.tsx` to use the correct base path for the image source:
