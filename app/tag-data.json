@@ -1,18 +1,1 @@
-{
-  "llama2": 1,
-  "ai": 2,
-  "chatbot": 2,
-  "python": 2,
-  "next-js": 1,
-  "java": 1,
-  "spring-boot": 1,
-  "react": 4,
-  "full-stack": 3,
-  "postgresql": 1,
-  "resume": 1,
-  "nodejs": 2,
-  "material-ui": 1,
-  "mern": 2,
-  "survey": 1,
-  "mongodb": 1
-}
+{"llama2":1,"ai":2,"chatbot":2,"python":2,"next-js":1,"java":1,"spring-boot":1,"react":4,"full-stack":3,"postgresql":1,"resume":1,"nodejs":2,"material-ui":1,"mern":2,"survey":1,"mongodb":1}
