@@ -144,3 +144,20 @@ See [Next.js on Netlify](https://docs.netlify.com/integrations/frameworks/next-j
 - [How can I add a custom MDX component?](/faq/custom-mdx-component.md)
 - [How can I customize the `kbar` search?](/faq/customize-kbar-search.md)
 - [How do I deploy on Github pages?](/faq/github-pages-deployment.md)
+
+## Index website for search results in browser
+
+### Google search results indexing
+
+[More Info](https://support.hostinger.com/en/articles/3692620-how-to-add-a-domain-to-google-search-console)
+
+- [Check if sitemap is correct and accessible](https://seositecheckup.com/tools/sitemap-test)
+- [Register website in google search console](https://search.google.com/search-console/about)
+- [Check dns is accesible in which countries](https://dnschecker.org)
+
+### Bing search results indexing
+
+[More Info](https://support.hostinger.com/en/articles/5844144-how-to-add-a-domain-to-the-bing-search-console)
+
+- [Check if sitemap is correct and accessible](https://seositecheckup.com/tools/sitemap-test)
+- [Register website in bing search console](https://www.bing.com/webmasters/about)

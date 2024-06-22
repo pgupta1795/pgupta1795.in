@@ -85,7 +85,7 @@ export default function Intro() {
             </span>
           </h1>
           <span className="job-title mb-8 block bg-gradient-to-tr from-purple-500 via-purple-200 to-purple-500 bg-clip-text text-2xl font-bold uppercase tracking-[.2em] text-transparent opacity-0 md:text-4xl">
-            {siteMetadata.description}
+            Full Stack Developer
           </span>
           <div className="mb-8 flex space-x-4">
             <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={6} />

@@ -3,7 +3,7 @@ const siteMetadata = {
   title: 'Resume - Pallav Gupta',
   author: 'Pallav Gupta',
   headerTitle: 'pgupta1795',
-  description: 'Full Stack Developer',
+  description: 'Full Stack Developer | Blogs | Projects | Resume',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://pgupta1795.in',
