@@ -7,6 +7,12 @@ interface Project {
 
 const projectsData: Project[] = [
   {
+    title: '3DXperience Web Service Agent',
+    description: `3DXperience Web Service Agent is a tool that allows you to interact with 3DXperience Web Service API. It is a tool that allows you to interact with 3DXperience Web Service API. It is a tool that allows you to interact with 3DXperience Web Service API.`,
+    imgSrc: '/static/blogs/demo_3DX_MCP.png',
+    href: '/blog/3dxperience-webservice-agent',
+  },
+  {
     title: 'A Survey Application',
     description: `Company based full stack MERN (MongoDB, Express, React, Node) survey application, that gives ability to admin of creating forms and these survey forms can be distributed to employees or group of users. Responses from users are recorded and shown in graphical form, that also emails the report based on responses to users.`,
     imgSrc: '/static/blogs/survey.png',
